@@ -1,0 +1,353 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+
+/* ###  DRAG AND DROP ## */ /* ###  MOBILE SIZE iPhone 5/6, blackberry all, samsung all, sony ##*/ 
+
+.button {
+  width: 50px;
+  height: 20px;
+  background-color: #fee;
+  margin: auto;
+  margin-top: 300px;
+  text-align: center;
+  color: #F31B46;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 2px;
+
+}
+
+.droppable {
+  width: 95%;
+  height: 60px;
+  margin: 0px;
+  list-style: none;
+  margin: auto;
+  margin-bottom: 4px;
+  padding: 0px;
+  z-index: 2;
+  text-align: center;
+}
+
+.draggable {
+  background-color: #fee;
+  display: inline-block;
+  font-size: 1.17em;
+  color: #F31B46;
+  cursor: move;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 8px;
+  z-index: 40;
+}
+
+.dropped {
+  background-color: #F31B46;
+  color: #fee;
+  font-size: 1.17em;
+  display: inline-block;
+  padding: 5px;
+  cursor: move;
+  margin-right: 0.5%;
+  border-radius: 8px;
+}
+
+.waitingDrop {
+  border: dashed 0.5px;
+  background-color: #FABECC;
+}
+.dropping {
+  background-color: #E8C29D;
+}
+
+
+
+/* ### POSITION ### */ /* ### MOBILE SIZE iPhone 5/6, blackberry all, samsung all, sony  ### */ 
+
+
+.first {
+  background-color: #EDCBA5;
+  position: relative;
+  border-radius: 2% 2% 0% 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding-top: 1%;
+  transition : all 0.7s ease ;
+}
+
+.second {
+  width: 100%;
+  height: 48%;
+  top:52%;
+  background-color: #F31B46;
+  border-radius: 0% 0% 2% 2%;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  overflow-y: auto;
+  z-index: 4;
+  bottom: 0px;
+  transition : all 0.4s ease ;
+}
+
+.second-hidden { 
+  bottom: -1000px;
+}
+
+.scrollbar {
+  width: 20px;
+  height: 100%;
+  background-color: green;
+  position: fixed;
+  right: 0px;
+}
+
+.pop-up {
+  overflow: hidden;
+  border: solid 10px;
+  width: 75%;
+  height: 75%;
+  background-color: white;
+  display: none;
+}
+
+.inner {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 6%;
+}
+
+.contener {
+  width: 85%;
+  margin: auto;
+}
+
+.middle {
+  width: 100%;
+  height: 20px;
+  background-color: gray;
+  text-align: center;
+  z-index: 60;
+  position: fixed;
+  cursor: pointer;
+}
+
+.middle2{
+  width: 100%;
+  height: 20px;
+  background-color: gray;
+  text-align: center;
+  z-index: 60;
+  position: absolute;
+  bottom: 3.5px;
+  cursor: pointer;
+}
+
+.arrow-second{
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg); /* for arrow */
+
+}
+
+.arrow-first {
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  margin-top:5px;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg); /* for arrow */
+}
+
+.result {
+  width: 100%;
+  height: 100%;
+}
+
+.choice {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  height: 5%;
+  background-color: gray;
+  margin: 0px;
+  padding: 0px;
+  line-height: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.choice li {
+  display: inline-block;
+  color: #fee;
+  margin: 4px;
+  background-color: none;
+  padding-right:2px;
+  padding-left:2px; 
+  transition: all 0.3s ease;
+
+}
+
+.choice li:hover {
+  background-color:#fee;
+  color: #F31B46;
+  border-radius: 5px;
+}
+
+
+
+/* ###########################  MEDIA QUERIES  ############################## */
+
+
+@media all and (min-width: 500px) {
+
+  .draggable {
+    padding: 8px;
+    font-size: 1.3em;
+  }
+
+  .dropped {
+    padding: 8px;
+    font-size: 1.3em;
+  }
+
+}
+
+@media all and (max-width: 1950px) {
+  .inner {
+      padding-top: 13%;
+    }
+
+}
+
+
+@media all and (max-width: 1550px) {
+
+  @media all and (max-height: 870px) {
+
+    .droppable{
+      height: 50px;
+    }
+
+    .inner {
+      padding-top: 7%;
+    }
+
+    .button {
+      margin-top: 200px;
+    }
+
+    .choice li{
+      font-size: 0.9em;
+    }
+  }
+
+  @media all and (max-height: 620px) {
+
+    .droppable{
+      height: 35px;
+    }
+    .draggable {
+      font-size: 0.9em;
+      padding: 4px;
+      margin-top: 6px;
+    }
+
+    .dropped {
+      font-size: 0.9em;
+      padding: 4px;
+    }
+
+    .inner {
+      padding-top: 8%;
+    }
+
+    .button {
+      margin-top: 200px;
+      padding: 0.5px;
+      font-size: 0.8em;
+    }
+
+    .choice li{
+      font-size: 0.8em;
+    }
+
+    .choice{
+      line-height: 15px;
+    }
+
+  }
+
+
+  @media all and (max-height: 500px){
+    .button {
+      margin-top: 110px;
+    }
+  }
+
+  @media all and (max-height: 400px) {
+    .draggable {
+      font-size: 0.9em;
+      padding: 1.5px;
+    }
+
+    .dropped {
+      font-size: 0.9em;
+      padding: 3px;
+    }
+
+    .inner {
+      padding-top: 4%;
+    }
+
+    .button {
+      margin-top: 10px;
+      padding: 0.5px;
+      font-size: 0.8em;
+    }
+
+    .choice{
+      line-height: 10px;
+    }
+
+    .choice li{
+      font-size: 0.7em;
+      margin: 2px;
+      padding: 1px;
+    }
+
+  }
+
+   @media all and (max-height: 300px){
+
+    .inner {
+      padding-top: 8%;
+    }
+
+    .button {
+      margin-top: -90px;
+      padding: 0.5px;
+      font-size: 0.8em;
+    }
+
+   }
+
+}
+
