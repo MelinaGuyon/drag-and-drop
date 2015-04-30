@@ -58,12 +58,12 @@ module.exports = function(grunt) {
         }]
       },
 
-      scroll: {
+      canvas: {
         files: [{
           expand: true,
-          cwd: 'src/script/scrollbar', //folder
+          cwd: 'src/script/canvas', //folder
           src: ['*.js'],
-          dest: 'build/assets/script/scrollbar',
+          dest: 'build/assets/script/canvas',
           ext: '.js'
         }]
       },
